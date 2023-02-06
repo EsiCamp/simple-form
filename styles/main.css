@@ -24,7 +24,7 @@ body {
   display: grid;
   justify-content: center;
   gap: 16px;
-  width: 340px;
+  width: 410px;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 24px 0;
   border-radius: 13px;
@@ -41,14 +41,19 @@ body {
   margin-bottom: 16px;
 }
 
+.gender_outer input {
+  width: unset;
+}
+
 input {
+  width: 100%;
   padding: 8px;
   border-radius: 10px;
   border: none;
 }
 
 label:not(.gender_outer label),
-span:not(.gender_outer span) {
+span:not(.gender_outer span, .fname_hint) {
   display: block;
   color: #fff;
   margin-bottom: 16px;
@@ -60,6 +65,12 @@ span:not(.gender_outer span) {
   color: #fff;
   font-size: 0.83em;
   font-weight: bold;
+}
+
+.fname_hint {
+  color: #fff;
+  font-size: 0.72em;
+  font-weight: normal;
 }
 
 #phone_input,
@@ -82,4 +93,12 @@ span:not(.gender_outer span) {
   font-size: 1.2em;
   margin-top: 20px;
   cursor: pointer;
+}
+
+input:invalid {
+  border: 2px solid #ff0707;
+}
+
+input:valid:not(.submit_btn) {
+  border: 2px solid #07ff28;
 }

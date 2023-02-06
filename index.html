@@ -1,72 +1,96 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+  <head>
+    <title>فرم</title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="فرم" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="فرم" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
 
-<head>
-  <title>
-    فرم
-  </title>
-  <meta charset="UTF-8">
-  <meta name="keywords" content="فرم">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="فرم">
-  <link rel="stylesheet" href="styles/main.css">
-</head>
-
-<body>
-  <div class="form_cnt">
-    <form class="form_inner" action="/">
-      <div class="input_outer">
-        <label for="fname">
-          نام:
-        </label>
-        <input type="text" id="fname" name="fname" placeholder="احسان">
-      </div>
-      <div class="input_outer">
-        <label for="last_name">
-          نام خانوادگی:
-        </label>
-        <input type="text" id="lname" name="lname" placeholder="تشکری">
-      </div>
-      <div class="input_outer">
-        <label for="phone_num">
-          تلفن همراه:
-        </label>
-        <input type="tel" id="phone_input" name="phone_num" placeholder="+98 912 081 7848">
-      </div>
-      <div class="input_outer">
-        <label for="age">
-          سن:
-        </label>
-        <input type="number" id="age_input" name="age" min="18" max="100">
-      </div>
-      <div class="gender_outer">
-        <span>
-          جنسیت:
-        </span>
-        <div>
-          <label for="male" class="radio_label">
-            مرد
-          </label>
-          <input type="radio" id="male" name="gender">
-          <label for="female" class="radio_label">
-            زن
-          </label>
-          <input type="radio" id="female" name="gender">
-          <label for="other" class="radio_label">
-            سایر
-          </label>
-          <input type="radio" id="other" name="gender">
+  <body>
+    <div class="form_cnt">
+      <form class="form_inner" action="/">
+        <div class="input_outer">
+          <label for="fname"> نام: </label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="احسان"
+            pattern="[a-z]+"
+            required
+            autocomplete="on"
+          />
+          <div>
+            <p class="fname_hint">*الزامی</p>
+            <p class="fname_hint">*لطفا با حروف کوچک تایپ شود.</p>
+          </div>
         </div>
-      </div>
-      <div class="input_outer">
-        <label for="password">
-          رمز عبور:
-        </label>
-        <input type="password" id="pass_input" name="password">
-      </div>
-      <input type="submit" value="ثبت" class="submit_btn">
-    </form>
-  </div>
-</body>
-
+        <div class="input_outer">
+          <label for="last_name"> نام خانوادگی: </label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="تشکری"
+            autocomplete="on"
+          />
+        </div>
+        <div class="input_outer">
+          <label for="phone_num"> تلفن همراه: </label>
+          <input
+            type="tel"
+            id="phone_input"
+            name="phone_num"
+            placeholder="+98 912 081 7848"
+          />
+        </div>
+        <div class="input_outer">
+          <label for="organization"> سازمان: </label>
+          <input
+            type="text"
+            id="organization"
+            name="organization"
+            placeholder="آسام"
+            autocomplete="off"
+          />
+        </div>
+        <div class="input_outer">
+          <label for="age"> سن: </label>
+          <input type="number" id="age_input" name="age" min="18" max="100" />
+        </div>
+        <div class="gender_outer">
+          <span> جنسیت: </span>
+          <div>
+            <label for="male" class="radio_label"> مرد </label>
+            <input type="radio" id="male" name="gender" />
+            <label for="female" class="radio_label"> زن </label>
+            <input type="radio" id="female" name="gender" />
+            <label for="other" class="radio_label"> سایر </label>
+            <input type="radio" id="other" name="gender" />
+          </div>
+        </div>
+        <div class="input_outer">
+          <label for="password"> رمز عبور: </label>
+          <input
+            type="password"
+            id="pass_input"
+            name="password"
+            required
+            minlength="4"
+            maxlength="12"
+          />
+          <div>
+            <p class="fname_hint">*الزامی</p>
+            <p class="fname_hint">
+              *رمز عبور انتخابی می‌بایست شامل ۴ تا ۱۲ کاراکتر باشد..
+            </p>
+          </div>
+        </div>
+        <input type="submit" value="ثبت" class="submit_btn" />
+      </form>
+    </div>
+  </body>
 </html>
